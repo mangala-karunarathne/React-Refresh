@@ -4,12 +4,8 @@ function App() {
 
   return (
     <div className="App">
-    <User name='Mangala' age={28} email="mangala@gmail.com"/>
-    <User name='Sawwa' age={27} email="Sawwa@gmail.com"/>
-    <User name='abc' age={28} email="abc@gmail.com"/>
-    <Job salary={1000} position="SE" company="Block Stars"/>
-    <Job salary={1500} position="SSE" company="Sysco"/>
-    <Job salary={2500} position="TL" company="WSO2"/>
+    
+    <h1 className="name">Mangala</h1>
     </div>
   );
 }
