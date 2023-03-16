@@ -1,11 +1,12 @@
-import styles from "./App.module.css";
+import "./App.css";
 
 function App() {
 
+  const age = 10;
+
   return (
-    <div className={styles.App}>
-    
-    <h1 className={styles.name}>Mangala</h1>
+    <div className="App">
+    {age>= 18 ? <h1>Over Age</h1> : <h1> Under Age</h1>}
     </div>
   );
 }
