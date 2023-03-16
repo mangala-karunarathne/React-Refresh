@@ -3,34 +3,17 @@ import "./App.css";
 function App() {
 
   const age = 10;
-  const isGreen = true;
+  const isGreen = false;
 
   return (
     <div className="App">
     {age>= 18 ? <h1>Over Age</h1> : <h1> Under Age</h1>}
     <h1 style={{color: isGreen ? 'green' : "red"}}>Age Color</h1>
+
+    {isGreen && <button> This is Green Button</button>}
     </div>
   );
 }
 
-const User = (props) => {
-  return (
-    <div >
-      <h1>{props.name}</h1>
-      <h1>{props.age} </h1>
-      <h1>{props.email}</h1>
-    </div>
-  )
-}
-
-const Job = (props) => {
-  return (
-    <div >
-      <h1>{props.salary}</h1>
-      <h1>{props.position} </h1>
-      <h1>{props.company}</h1>
-    </div>
-  )
-};
 
 export default App;
