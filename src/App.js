@@ -2,17 +2,17 @@ import "./App.css";
 
 function App() {
 
-  const age = 10;
-  const isGreen = false;
+  const names = [ "Mangala", "Sawwa", "Dana", "Lak", "Hareen", "Chukki"];
 
   return (
     <div className="App">
-    {age>= 18 ? <h1>Over Age</h1> : <h1> Under Age</h1>}
-    <h1 style={{color: isGreen ? 'green' : "red"}}>Age Color</h1>
-
-    {isGreen && <button> This is Green Button</button>}
+      {
+        names.map((name, key)=>{
+            return <h1 key={key}>{name}</h1>;
+        })
+      }
     </div>
-  );
+  )
 }
 
 
