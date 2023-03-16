@@ -1,11 +1,11 @@
-import "./App.css";
+import styles from "./App.module.css";
 
 function App() {
 
   return (
-    <div className="App">
+    <div className={styles.App}>
     
-    <h1 className="name">Mangala</h1>
+    <h1 className={styles.name}>Mangala</h1>
     </div>
   );
 }
