@@ -2,14 +2,14 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const [showText, setShowText] = useState(true);
+  const [textColor, setTextColor] = useState("green");
 
   return (
     <div className="App">
       <button onClick={()=>{
-        setShowText(!showText)
-      }}> Show / Hide</button>
-      {showText === true && <h1> Here is MK Dev</h1>}
+        setTextColor(textColor === "green" ? "red" : "green")
+      }}> Green / Red </button>
+      <h1 style={{color: textColor}}> Here is MK Dev</h1>
     </div>
   );
 }
