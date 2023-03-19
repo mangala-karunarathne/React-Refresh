@@ -2,18 +2,20 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
+  const [showText, setShowText] = useState(true);
 
-  const [inputText, setInputText] = useState("")
-
-const handleInputChange = (event) => {
-  console.log(event.target.value);
-  setInputText(event.target.value);
-};
+  const showTextHandler = () => {
+    if (showText === true) {
+      setShowText(false);
+    } else {
+      setShowText(true);
+    }
+  };
 
   return (
     <div className="App">
-     <input type="text" onChange={handleInputChange}/>
-      {inputText}
+      <button onClick={showTextHandler}> Show / Hide</button>
+      {showText === true && <h1> Here is MK Dev</h1>}
     </div>
   );
 }
