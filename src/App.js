@@ -1,26 +1,29 @@
 import "./App.css";
-import User from './User';
-import Planet from './Planets';
+import { useState } from "react";
 
 function App() {
+  const [count, setCount] = useState(0);
 
-  const planets = [
-    {name: "Mars", isGasPlanet: false},
-    {name: "Earth", isGasPlanet: false},
-    {name: "Jupiter", isGasPlanet: false},
-    {name: "Venus", isGasPlanet: false},
-    {name: "Neptune", isGasPlanet: true},
-    {name: "Uranus", isGasPlanet: true}
-    ];
+  const increaseCount = () => {
+    setCount(count+1)
+  };
+  const decreaseCount = () => {
+    setCount(count-1)
+  };
+  const zeroSet = () => {
+    setCount(0)
+  };
 
   return (
     <div className="App">
-      {planets.map((planet, key) => !planet.isGasPlanet &&
-        <h1>{planet.name}</h1>
-      )}
+        <button onClick={increaseCount}>Increase</button>
+        <button onClick={decreaseCount}>Decrese</button>
+        <button onClick={zeroSet}>Set to Zero</button>
+        <div>
+          {count}
+        </div>
     </div>
   );
 }
-
 
 export default App;
