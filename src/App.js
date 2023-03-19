@@ -3,19 +3,17 @@ import { useState } from "react";
 
 function App() {
 
-const [age, setAge] = useState(0);
+  const [inputText, setInputText] = useState("")
 
-  const increaseAge = () => {
-    setAge(age + 1);
-  };
-
-  console.log(age);
+const handleInputChange = (event) => {
+  console.log(event.target.value);
+  setInputText(event.target.value);
+};
 
   return (
     <div className="App">
-      {age}
-      <button onClick={increaseAge}> Increase Age </button>
-      
+     <input type="text" onChange={handleInputChange}/>
+      {inputText}
     </div>
   );
 }
