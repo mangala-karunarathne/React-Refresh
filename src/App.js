@@ -10,8 +10,9 @@ function App() {
   };
 
   const addTask = () => {
-    const newTodoList = [...todoList, newTask];
-    setTodoList(newTodoList);
+    // const newTodoList = [...todoList, newTask];
+    // setTodoList(newTodoList);
+    setTodoList([...todoList, newTask]);
   };
 
   return (
