@@ -15,18 +15,20 @@ function App() {
     setTodoList([...todoList, newTask]);
   };
 
+  // const deleteTask = (taskName) => {
+  //   const newTodoList = todoList.filter((task) => {
+  //     // if (task === taskName) {
+  //     //   return false;
+  //     // } else {
+  //     //   return true;
+  //     // }
+
+  //     return task !== taskName;
+  //   });
+
+
   const deleteTask = (taskName) => {
-    const newTodoList = todoList.filter((task) => {
-      // if (task === taskName) {
-      //   return false;
-      // } else {
-      //   return true;
-      // }
-
-      return task !== taskName;
-    });
-
-    setTodoList(newTodoList);
+    setTodoList(todoList.filter((task) => task !== taskName));
   };
 
   return (
