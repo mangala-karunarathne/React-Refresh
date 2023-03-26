@@ -10,18 +10,16 @@ function App() {
   };
 
   const addTask = () => {
-
-    const addTask = () => {
-      const task = {
-        id: todoList.length ===0 ? 1 : todoList[todoList.length - 1].id + 1,
-        taskName: newTask,
-      }
+    const task = {
+      id: todoList.length === 0 ? 1 : todoList[todoList.length - 1].id + 1,
+      taskName: newTask,
     };
-    setTodoList([...todoList, newTask]);
+
+    setTodoList([...todoList, task]);
   };
 
-  const deleteTask = (taskName) => {
-    setTodoList(todoList.filter((task) => task !== taskName));
+  const deleteTask = (id) => {
+    setTodoList(todoList.filter((task) => task.id !== id));
   };
 
   return (
@@ -35,7 +33,7 @@ function App() {
           return (
             <div>
               <h1>{task.taskName}</h1>
-              <button onClick={() => deleteTask(task)}> X </button>
+              <button onClick={() => deleteTask(deleteTask)}> X </button>
             </div>
           );
         })}
