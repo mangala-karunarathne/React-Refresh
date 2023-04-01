@@ -33,7 +33,7 @@ function App() {
           return (
             <div>
               <h1>{task.taskName}</h1>
-              <button onClick={() => deleteTask(deleteTask)}> X </button>
+              <button onClick={() => deleteTask(task.id)}> X </button>
             </div>
           );
         })}
