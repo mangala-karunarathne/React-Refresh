@@ -3,16 +3,15 @@ import { useState } from "react";
 import Text from "./Text";
 
 function App() {
-  const [showText, setShowText] = useState(false);
-
+  fetch("https://catfact.ninja/fact")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+    });
   return (
     <div className="App">
-      <button onClick={()=>{
-        setShowText(!showText)
-      }}>
-        Show Text
-      </button>
-    {showText && <Text setShowText={setShowText}/>}
+      <button>Generate Cat Fact</button>
+      <p> </p>
     </div>
   );
 }
