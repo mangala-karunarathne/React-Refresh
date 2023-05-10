@@ -14,7 +14,7 @@ const [username, setUsername] = useState("Mangala");
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home username={username}/>}/>
-          <Route path="/profile" element={<Profile username={username}/>} setUsername={setUsername}/>
+          <Route path="/profile" element={<Profile username={username} setUsername={setUsername}/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="*" element={<h1> 404 | Page not Found</h1>}/>
         </Routes>
